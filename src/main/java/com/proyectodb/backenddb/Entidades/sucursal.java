@@ -2,20 +2,26 @@ package com.proyectodb.backenddb.Entidades;
 
 
 
+import jakarta.persistence.Basic;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+
+
 
 @Entity
 @Table(name = "SUCURSAL")
 public class sucursal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Basic(optional = false)
     @Column(name = "IDSUCURSAL")
-    private Long idSucursal;
+    private Long idsucursal;
 
     @Column(name = "NOMBRE_SUCURSAL")
     private String nombreSucursal;
@@ -26,17 +32,18 @@ public class sucursal {
     @Column(name = "CONTACTO")
     private String contacto;
 
-    @Column(name = "IDLOCALIDAD")
-    private Long idLocalidad;
+    @ManyToOne
+    @JoinColumn(name = "IDLOCALIDAD", referencedColumnName = "IDLOCALIDAD")
+    private departamento localidad;
 
     // Getters y Setters
 
-    public Long getIdSucursal() {
-        return idSucursal;
+    public Long getIdsucursal() {
+        return idsucursal;
     }
 
-    public void setIdSucursal(Long idSucursal) {
-        this.idSucursal = idSucursal;
+    public void setIdsucursal(Long idsucursal) {
+        this.idsucursal = idsucursal;
     }
 
     public String getNombreSucursal() {
@@ -63,11 +70,13 @@ public class sucursal {
         this.contacto = contacto;
     }
 
-    public Long getIdLocalidad() {
-        return idLocalidad;
+    public departamento getLocalidad() {
+        return localidad;
     }
 
-    public void setIdLocalidad(Long idLocalidad) {
-        this.idLocalidad = idLocalidad;
+    public void setLocalidad(departamento localidad) {
+        this.localidad = localidad;
     }
 }
+
+

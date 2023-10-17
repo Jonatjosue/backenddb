@@ -1,5 +1,6 @@
 package com.proyectodb.backenddb.Entidades;
 
+import jakarta.persistence.Basic;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -12,6 +13,7 @@ import jakarta.persistence.Table;
 public class tipomatricula {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic (optional = false)
     @Column(name = "IDTIPOMATRICULA")
     private Long idtipomatricula;
 

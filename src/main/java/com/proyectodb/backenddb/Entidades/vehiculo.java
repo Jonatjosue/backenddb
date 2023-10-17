@@ -1,5 +1,6 @@
 package com.proyectodb.backenddb.Entidades;
 
+import jakarta.persistence.Basic;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -19,6 +20,7 @@ import com.proyectodb.backenddb.Entidades.color;
 public class vehiculo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
     @Column(name = "IDVEHICULO")
     private Long idvehiculo;
 

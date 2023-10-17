@@ -1,5 +1,6 @@
 package com.proyectodb.backenddb.Entidades;
 
+import jakarta.persistence.Basic;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -16,6 +17,7 @@ import com.proyectodb.backenddb.Entidades.marca;
 public class linea {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Basic(optional = false)
     @Column(name = "IDLINEA")
     private Long idlinea;
 

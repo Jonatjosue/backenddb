@@ -10,26 +10,25 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.proyectodb.backenddb.Entidades.departamento;
-import com.proyectodb.backenddb.Repositorios.departamentodal;
+import com.proyectodb.backenddb.Entidades.marca;
+import com.proyectodb.backenddb.Repositorios.marcadal;
 
 @RestController
-public class departamentoctrl {
-
- @Autowired
-    private departamentodal dbobj;
-
+public class marcactrl {
     
-@GetMapping ("/Listadepartamento")
-public List<departamento> Listadepartamento() {
-return (List<departamento>) dbobj.findAll();
+    @Autowired
+    private marcadal marcaobj;
+
+@GetMapping("/listamarca")
+public List<marca> listamarca(){
+    return (List<marca>) marcaobj.findAll();
 }
 
-    @PostMapping(path="/Insertadepartamento")
-public String InsertaProducto(@RequestBody departamento dep) {
-    dbobj.save(dep);
+ @PostMapping(path="/insertarmarca")
+public String insertarmarca(@RequestBody marca mar) {
+    marcaobj.save(mar);
 return "Registro ingresado";
 }
 
 
-    
 }

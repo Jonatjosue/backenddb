@@ -22,6 +22,9 @@ public class sucursalctrl {
     public List<sucursal> obtenerTodasLasSucursales() {
         return sucursalRepository.findAll();
     }
+/* 
+    @PostMapping("/addsucursal")
+    public */
 
     
 }

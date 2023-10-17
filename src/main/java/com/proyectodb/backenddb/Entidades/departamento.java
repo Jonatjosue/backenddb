@@ -8,42 +8,55 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Basic;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
-
-
-
-@Entity  
-@Component
-@Table(name="departamento")
-
+@Entity
+@Table(name = "DEPARTAMENTO")
 public class departamento {
-     @Id
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Basic(optional = false)
+    @Column(name = "IDLOCALIDAD")
+    private Long idlocalidad;
 
-    @GenericGenerator(name = "DEPARTAMENTO", strategy = "enhanced-table", parameters = {
-        @org.hibernate.annotations.Parameter(name = "DEPARTAMENTO", value = "sequence_table")
-    })
-    @GeneratedValue(generator = "secuence_table", strategy=GenerationType.TABLE)
-    private Integer IDLOCALIDAD;
+    @Column(name = "NOMBRE")
+    private String nombre;
 
-    private String NOMBRE;
-    private String DEPARTAMENTO;
-    public Integer getIDLOCALIDAD() {
-        return IDLOCALIDAD;
+    @Column(name = "DEPARTAMENTO")
+    private String nombreDepartamento;
+
+    // Getters y Setters
+
+    public Long getIdlocalidad() {
+        return idlocalidad;
     }
-    public void setIDLOCALIDAD(Integer Idlocalidad) {
-        this.IDLOCALIDAD = Idlocalidad;
+
+    public void setIdlocalidad(Long idlocalidad) {
+        this.idlocalidad = idlocalidad;
     }
-    public String getNOMBRE() {
-        return NOMBRE;
+
+    public String getNombre() {
+        return nombre;
     }
-    public void setNOMBRE(String nombre) {
-        this.NOMBRE = nombre;
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
-    public String getDEPARTAMENTO() {
-        return DEPARTAMENTO;
+
+    public String getNombreDepartamento() {
+        return nombreDepartamento;
     }
-    public void setDEPARTAMENTO(String departamento) {
-        this.DEPARTAMENTO = departamento;
+
+    public void setNombreDepartamento(String nombreDepartamento) {
+        this.nombreDepartamento = nombreDepartamento;
     }
-    
 }
+
+    
+
