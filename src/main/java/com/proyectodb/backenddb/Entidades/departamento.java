@@ -17,33 +17,33 @@ import jakarta.persistence.Table;
 @Table(name="departamento")
 
 public class departamento {
-    @Id
+     @Id
 
     @GenericGenerator(name = "DEPARTAMENTO", strategy = "enhanced-table", parameters = {
         @org.hibernate.annotations.Parameter(name = "DEPARTAMENTO", value = "sequence_table")
     })
     @GeneratedValue(generator = "secuence_table", strategy=GenerationType.TABLE)
-
     private Integer IDLOCALIDAD;
+
     private String NOMBRE;
     private String DEPARTAMENTO;
     public Integer getIDLOCALIDAD() {
         return IDLOCALIDAD;
     }
     public void setIDLOCALIDAD(Integer Idlocalidad) {
-        IDLOCALIDAD = Idlocalidad;
+        this.IDLOCALIDAD = Idlocalidad;
     }
     public String getNOMBRE() {
         return NOMBRE;
     }
     public void setNOMBRE(String nombre) {
-        NOMBRE = nombre;
+        this.NOMBRE = nombre;
     }
     public String getDEPARTAMENTO() {
         return DEPARTAMENTO;
     }
     public void setDEPARTAMENTO(String departamento) {
-        DEPARTAMENTO = departamento;
+        this.DEPARTAMENTO = departamento;
     }
     
 }
