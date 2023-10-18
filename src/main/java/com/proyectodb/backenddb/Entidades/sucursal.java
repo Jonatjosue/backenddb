@@ -19,7 +19,7 @@ import jakarta.persistence.Table;
 public class sucursal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Basic(optional = false)
+	@Basic(optional = true)
     @Column(name = "IDSUCURSAL")
     private Long idsucursal;
 

@@ -13,7 +13,7 @@ import jakarta.persistence.Table;
 public class tipomatricula {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic (optional = false)
+    @Basic (optional = true)
     @Column(name = "IDTIPOMATRICULA")
     private Long idtipomatricula;
 

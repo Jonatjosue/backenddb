@@ -17,7 +17,7 @@ import com.proyectodb.backenddb.Entidades.marca;
 public class linea {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Basic(optional = false)
+	@Basic(optional = true)
     @Column(name = "IDLINEA")
     private Long idlinea;
 

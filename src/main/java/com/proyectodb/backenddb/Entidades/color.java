@@ -13,7 +13,7 @@ import jakarta.persistence.Table;
 public class color {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Basic(optional = false)
+	@Basic(optional = true) 
     @Column(name = "IDCOLOR")
     private Long idcolor;
 

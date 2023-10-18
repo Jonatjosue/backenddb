@@ -15,7 +15,7 @@ import jakarta.persistence.Table;
 public class detalleFactura {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Basic(optional = false)
+	@Basic(optional = true)
     @Column(name = "ID_DETALLE_FACTURA")
     private Long idDetalleFactura;
 

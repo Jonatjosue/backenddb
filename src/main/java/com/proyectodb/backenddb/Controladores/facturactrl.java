@@ -15,9 +15,9 @@ import com.proyectodb.backenddb.Repositorios.tipomatriculadal;
 
 @RestController
 public class facturactrl {
-
+/* 
      @Autowired
-    private factura obj;
+    private factura obj;*/
 
     /*   relaciones
 @GetMapping("/listafactura")

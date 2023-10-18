@@ -18,7 +18,7 @@ import java.util.Date;
 public class producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Basic(optional = false)
+	@Basic(optional = true)
     @Column(name = "IDPRODUCTO")
     private Long idproducto;
 

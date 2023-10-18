@@ -19,7 +19,7 @@ import java.util.Date;
 public class factura {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Basic(optional = false)
+	@Basic(optional = true)
     @Column(name = "IDFACTURA")
     private Long idfactura;
 

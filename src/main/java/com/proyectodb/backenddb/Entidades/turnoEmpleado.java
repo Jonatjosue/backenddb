@@ -16,7 +16,7 @@ import java.util.Date;
 public class turnoEmpleado {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Basic(optional = false)
+	@Basic(optional = true)
     @Column(name = "IDTURNO")
     private Long idTurno;
 

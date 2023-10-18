@@ -20,7 +20,7 @@ import com.proyectodb.backenddb.Entidades.color;
 public class vehiculo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
+    @Basic(optional = true)
     @Column(name = "IDVEHICULO")
     private Long idvehiculo;
 

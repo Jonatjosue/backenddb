@@ -15,7 +15,7 @@ import jakarta.persistence.Table;
 public class estado {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Basic(optional = false)
+	@Basic(optional = true)
     @Column(name = "IDESTADO")
     private Long idestado;
 

@@ -15,7 +15,7 @@ import jakarta.persistence.Table;
 public class historialCompra {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Basic(optional = false)
+	@Basic(optional = true)
     @Column(name = "IDHISTORIALC")
     private Long idHistorialC;
 
