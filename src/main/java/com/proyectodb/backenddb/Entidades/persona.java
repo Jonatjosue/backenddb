@@ -51,14 +51,6 @@ public class persona {
     @JoinColumn(name = "ID_IDENTIFICACION", referencedColumnName = "ID_IDENTIFICACION")
     private docIdentificacion docIdentificacion;
 
-    @OneToOne(mappedBy = "persona")
-    private cliente cliente;
-
-    @OneToOne(mappedBy = "persona")
-    private empleado empleado;
-
-    @OneToOne(mappedBy = "persona")
-    private proveedor proveedor;
 
     // Getters y Setters
 
@@ -140,29 +132,5 @@ public class persona {
 
     public void setDocIdentificacion(docIdentificacion docIdentificacion) {
         this.docIdentificacion = docIdentificacion;
-    }
-
-    public cliente getCliente() {
-        return cliente;
-    }
-
-    public void setCliente(cliente cliente) {
-        this.cliente = cliente;
-    }
-
-    public empleado getEmpleado() {
-        return empleado;
-    }
-
-    public void setEmpleado(empleado empleado) {
-        this.empleado = empleado;
-    }
-
-    public proveedor getProveedor() {
-        return proveedor;
-    }
-
-    public void setProveedor(proveedor proveedor) {
-        this.proveedor = proveedor;
     }
 }

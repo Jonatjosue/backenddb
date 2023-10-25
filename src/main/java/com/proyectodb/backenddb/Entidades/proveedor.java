@@ -27,7 +27,7 @@ public class proveedor {
     @JoinColumn(name = "IDPRODUCTOP", referencedColumnName = "IDPRODUCTOP")
     private productoProveedor productoProveedor;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "IDPERSONA", referencedColumnName = "IDPERSONA")
     private persona persona;
 

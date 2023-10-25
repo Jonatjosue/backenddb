@@ -40,7 +40,7 @@ public class empleado {
     @JoinColumn(name = "IDTURNO", referencedColumnName = "IDTURNO")
     private turnoEmpleado turnoEmpleado;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "IDPERSONA", referencedColumnName = "IDPERSONA")
     private persona persona;
 

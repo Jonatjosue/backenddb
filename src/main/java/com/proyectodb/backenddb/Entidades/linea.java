@@ -10,6 +10,8 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
+import java.util.List;
+
 import com.proyectodb.backenddb.Entidades.marca;
 
 @Entity
@@ -52,5 +54,9 @@ public class linea {
 
     public void setMarca(marca marca) {
         this.marca = marca;
+    }
+
+    public List<linea> findAll() {
+        return null;
     }
 }

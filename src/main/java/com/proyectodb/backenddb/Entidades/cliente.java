@@ -24,7 +24,7 @@ public class cliente {
     @JoinColumn(name = "IDHISTORIALC", referencedColumnName = "IDHISTORIALC")
     private historialCompra historialCompra;
 
-     @OneToOne
+     @ManyToOne
     @JoinColumn(name = "IDPERSONA", referencedColumnName = "IDPERSONA")
     private persona persona;
 
